@@ -1,5 +1,13 @@
+:root {
+    --primary-color: #444444;
+    --primary-text-color: #CCCCCC;
+    --secondary-color: #FF7300;
+    --secondary-text-color: #000000;
+    --accent-color: #B8EF98;
+}
+
 header {
-    background-color: darkblue;
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: space-between;
 }
@@ -12,9 +20,8 @@ header > * {
 
 /* page title floats off to the left*/
 header h1 {
-    color: white;
-    float: left;
-    font-size: 175%;
+    color: var(--secondary-text-color);
+    font-size: 200%;
 }
 
 .nav-bar {
@@ -29,7 +36,19 @@ header h1 {
 }
 
 .nav-bar ul li {
-    color: white;
+    color: var(--secondary-text-color);
     display: inline;
     font-size: 120%;
 }
+
+.main-body-content {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+}
+
+/* 500 700 900 ranges */
