@@ -1,0 +1,35 @@
+header {
+    background-color: darkblue;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* all elements in header have 8px of padding */
+header > * {
+    margin: auto 0;
+    padding: 20px;
+}
+
+/* page title floats off to the left*/
+header h1 {
+    color: white;
+    float: left;
+    font-size: 175%;
+}
+
+.nav-bar {
+    float: right;
+    width: 20%;
+    min-width: 300px;
+}
+
+.nav-bar ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar ul li {
+    color: white;
+    display: inline;
+    font-size: 120%;
+}
