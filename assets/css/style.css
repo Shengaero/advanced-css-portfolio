@@ -35,19 +35,19 @@ header h1 {
 }
 
 /* nav bar to the right */
-.nav-bar {
+header nav {
     float: right;
     width: 20%;
     min-width: 300px;
     margin-right: 40px;
 }
 
-.nav-bar ul {
+.nav-list {
     display: flex;
     justify-content: space-between;
 }
 
-.nav-bar ul li {
+.nav-list li {
     position: relative;
     display: inline;
     font-size: 80%;
@@ -55,7 +55,7 @@ header h1 {
 }
 
 /* links in navbar have secondary text color and no underline */
-.nav-bar ul li a {
+.nav-list li a {
     color: var(--secondary-text-color);
     text-decoration: none;
 }
@@ -82,7 +82,7 @@ header h1 {
         margin-left: inherit;
     }
 
-    .nav-bar {
+    header nav {
         margin-right: inherit;
     }
 }
