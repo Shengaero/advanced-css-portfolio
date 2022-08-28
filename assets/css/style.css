@@ -6,24 +6,34 @@
     --accent-color: #B8EF98;
 }
 
+/* smooth scroll behavior for clicking links and page refresh */
+
+* {
+    scroll-behavior: smooth;
+}
+
+/* ***************************************  HEADER  **************************************** */
+
 header {
     background-color: var(--secondary-color);
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
 }
 
-/* all elements in header have 8px of padding */
+/* all elements in header have 20px of padding */
 header > * {
     margin: auto 0;
     padding: 20px;
 }
 
-/* page title floats off to the left*/
+/* page title to the left */
 header h1 {
     color: var(--secondary-text-color);
     font-size: 200%;
 }
 
+/* nav bar to the right */
 .nav-bar {
     float: right;
     width: 20%;
@@ -36,19 +46,54 @@ header h1 {
 }
 
 .nav-bar ul li {
-    color: var(--secondary-text-color);
+    position: relative;
     display: inline;
-    font-size: 120%;
+    font-size: 80%;
+    font-weight: 900;
 }
 
-.main-body-content {
+/* links in navbar have secondary text color and no underline */
+.nav-bar ul li a {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+}
+
+/* align header text to center of screen for small screen sizes */
+@media screen and (max-width: 450px) {
+    header h1 {
+        text-align: center;
+    }
+}
+
+/* change flex header and navbar vertically for small and medium screen sizes */
+@media screen and (max-width: 650px) {
+    header {
+        flex-direction: column;
+    }
+}
+
+/* **************************************  MAIN BODY  ***************************************** */
+
+main {
     background-color: var(--primary-color);
     color: var(--primary-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 100vh;
 }
+
+/* change min-height for small and medium screen sizes */
+@media screen and (max-width: 650px) {
+    main {
+        min-height: 120vh;
+    }
+}
+
+/* ***************************************  FOOTER  ****************************************** */
 
 footer {
     background-color: var(--secondary-color);
     color: var(--secondary-text-color);
 }
 
-/* 500 700 900 ranges */

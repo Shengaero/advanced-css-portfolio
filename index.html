@@ -25,31 +25,41 @@
             <nav class="nav-bar">
                 <!-- TODO: Add links -->
                 <ul>
-                    <li>About Me</li>
-                    <li>GitHub</li>
-                    <li>Resume</li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#my-work">My Work</a></li>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Resume</a></li>
                 </ul>
             </nav>
         </header>
 
-        <main class="main-body-content">
-            <h1>
-                About Me
-            </h1>
-            <p>
-                My name is Kaidan, I have been developing in Java for 4 years and I am interested in web backend development.
-            </p>
-            <h1>
-                My Work
-            </h1>
-            <p>
-                Coming Soon
-            </p>
+        <main>
+            <section id="about-me">
+                <h1>
+                    About Me
+                </h1>
+                <p>
+                    My name is Kaidan, I have been developing in Java for 4 years and I am interested in web backend development.
+                </p>
+            </section>
+            <section id="my-work">
+                <h1>
+                    My Work
+                </h1>
+                <p>
+                    Coming Soon
+                </p>
+            </section>
         </main>
 
         <footer>
             <h1>Terrible Boilerplate By Kaidan Gustave</h1>
             <p>&copy; 2022 Kaidan Gustave</p>
         </footer>
+
+        <!--This will scroll the page back to the top when you hit the refresh button -->
+        <script>
+            location.replace('#');
+        </script>
     </body>
 </html>
