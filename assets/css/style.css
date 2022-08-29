@@ -92,6 +92,14 @@ header nav {
 
 /* **************************************  MAIN BODY  ***************************************** */
 
+.main-body-img {
+    height: 400px;
+    width: 100%;
+    background-image: url("../images/header-background-image.png");
+    background-size: cover;
+    background-position: left top -175px;
+}
+
 main {
     padding-top: 20px;
     background-color: var(--primary-color);
