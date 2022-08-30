@@ -2,8 +2,10 @@
     --primary-color: #444444;
     --primary-text-color: #CCCCCC;
     --secondary-color: #FF7300;
+    --secondary-color-rgb: 255, 115, 0;
     --secondary-text-color: #000000;
     --accent-color: #B8EF98;
+    --border-accent-width: 5px;
 }
 
 body {
@@ -23,7 +25,7 @@ header {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    min-height: 80px;
+    min-height: 100px;
 }
 
 /* all elements in header have 20px of padding */
@@ -107,7 +109,7 @@ header nav {
 .main-body-img {
     height: 400px;
     width: 100%;
-    background-image: url("../images/header-background-image.png");
+    background-image: url("../images/dog.webp");
     background-size: cover;
     background-position: left top -175px;
 }
@@ -119,7 +121,7 @@ main {
     display: grid;
     flex-direction: column;
     justify-content: space-evenly;
-    min-height: 1000px;
+    min-height: 1500px;
     grid-template-areas: 
     'about-me-header    about-me-content  '
     'work-header        work-content      '
@@ -142,7 +144,7 @@ main > * {
 
 main h1 {
     border-right: var(--primary-text-color);
-    border-right-width: 5px;
+    border-right-width: var(--border-accent-width);
     border-right-style: solid;
     margin-left: 50px;
     text-align: right;
@@ -151,11 +153,11 @@ main h1 {
 }
 
 main section {
-    margin-right: 75px;
+    margin-right: 90px;
     margin-left: 25px;
 }
 
-.about-me-header {
+#about-me {
     grid-area: about-me-header;
 }
 
@@ -163,7 +165,7 @@ main section {
     grid-area: about-me-content;
 }
 
-.work-header {
+#work {
     grid-area: work-header;
 }
 
@@ -177,21 +179,59 @@ main section {
 }
 
 .work-content div {
-    height: 30%;
-    border-width: 5px;
-    border-style: solid;
+    border-width: var(--border-accent-width);
     border-color: var(--secondary-color);
+    border-style: solid;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.work-content div::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: rgba(var(--secondary-color-rgb), 0);
+}
+
+.work-content div:hover::before {
+    background-color: rgba(var(--secondary-color-rgb), 0.3);
+    transition: all 0.5s ease-in-out;
 }
 
 .large-card {
+    background-image: url("../images/cat1.jpg");
+    height: 53%;
     width: 98%;
 }
 
-.small-card {
+.work-content div[class^="small-card-"] {
+    height: 22%;
     width: 48%;
 }
 
-.contact-me-header {
+.small-card-one {
+    background-image: url("../images/cat2.jpg");
+}
+
+.small-card-two {
+    background-image: url("../images/cat3.jpg");
+}
+
+.small-card-three {
+    background-image: url("../images/cat4.jpg");
+}
+
+.small-card-four {
+    background-image: url("../images/cat5.jpg");
+}
+
+#contact-me {
     grid-area: contact-me-header;
     margin-top: auto;
     margin-bottom: auto;
@@ -213,6 +253,11 @@ main section {
     font-size: 120%;
 }
 
+.contact-me-content ul li a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
 /* change min-height for small and medium screen sizes */
 @media screen and (max-width: 700px) {
     main {
@@ -223,38 +268,39 @@ main section {
     main h1 {
         display: flex;
         justify-content: center;
-        border-right: var(--primary-text-color);
         border-right-width: none;
         border-right-style: none;
         text-align: center;
         font-size: 240%;
         width: auto;
+        border-bottom-color: var(--primary-text-color);
+        border-bottom-width: var(--border-accent-width);
+        border-bottom-style: solid;
 
-        /* left right margins to 20 for consistency */
-        margin-left: 20px;
-        margin-right: 20px; 
+        /* left right margins to auto to crop bottom border line down */
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 20px; /* remove auto margin*/
         margin-bottom: 0px; /* remove margin on bottom to make header closer to actual tabs */
     }
 
-    main p {
+    main section {
+        margin: 25px;
+    }
+
+    .about-me-content p {
         font-size: 150%;
     }
 
     .work-content {
-        margin-top: auto;
-        margin-bottom: auto;
+        height: 500px;
     }
 
 
     /* set this one manually for some reason or else it doesn't actually stop automatically scaling */
-    .contact-me-header {
+    #contact-me {
         margin-top: 20px;
         margin-bottom: 0px;
-    }
-
-    main ul {
-        margin: 20px;
     }
 }
 
