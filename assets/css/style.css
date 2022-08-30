@@ -45,6 +45,8 @@ header nav {
     width: 20%;
     min-width: 300px;
     margin-right: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .nav-list {
@@ -85,12 +87,18 @@ header nav {
     }
 
     header h1 {
+        font-size: 250%;
         text-align: center;
         margin-left: inherit;
     }
 
     header nav {
         margin-right: inherit;
+        width: 80%;
+    }
+    
+    .nav-list li {
+        font-size: 120%;
     }
 }
 
