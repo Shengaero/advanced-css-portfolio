@@ -109,36 +109,32 @@ main {
     justify-content: space-evenly;
     min-height: 1000px;
     grid-template-areas: 
-    'l1 r1 r1'
-    'l2 r2 r2'
-    'l2 r2 r2'
-    'l2 r2 r2'
-    'l2 r2 r2'
-    'l2 r2 r2'
-    'l2 r2 r2'
-    'l2 r2 r2'
-    'l3 r3 r3'
+    'about-me-header    about-me-content  '
+    'work-header        work-content      '
+    'work-header        work-content      '
+    'work-header        work-content      '
+    'contact-me-header  contact-me-content'
     ;
 }
 
 /* Grid Layout */
 .about-me-header {
-    grid-area: l1;
+    grid-area: about-me-header;
 }
 .work-header {
-    grid-area: l2;
+    grid-area: work-header;
 }
 .contact-me-header {
-    grid-area: l3;
+    grid-area: contact-me-header;
 }
 .about-me-content {
-    grid-area: r1;
+    grid-area: about-me-content;
 }
 .work-content {
-    grid-area: r2;
+    grid-area: work-content;
 }
 .contact-me-content {
-    grid-area: r3;
+    grid-area: contact-me-content;
 }
 
 main > * {
