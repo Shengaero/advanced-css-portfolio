@@ -9,4 +9,4 @@ This is the second challenge for the Northwestern University bootcamp which task
 
 # Link
 
-Visit the deployed site [here](https://github.com/shengaero/advanced-css-portfolio/).
+Visit the deployed site [here](https://shengaero.github.io/advanced-css-portfolio/).
