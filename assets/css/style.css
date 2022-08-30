@@ -134,26 +134,6 @@ main {
 }
 
 /* Grid Layout */
-.about-me-header {
-    grid-area: about-me-header;
-}
-.work-header {
-    grid-area: work-header;
-}
-.contact-me-header {
-    grid-area: contact-me-header;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-.about-me-content {
-    grid-area: about-me-content;
-}
-.work-content {
-    grid-area: work-content;
-}
-.contact-me-content {
-    grid-area: contact-me-content;
-}
 
 main > * {
     padding: 5px 10px;
@@ -170,17 +150,65 @@ main h1 {
     width: 170px;
 }
 
-main p {
-    margin-right: 50px;
+main section {
+    margin-right: 75px;
+    margin-left: 25px;
 }
 
-main ul {
+.about-me-header {
+    grid-area: about-me-header;
+}
+
+.about-me-content {
+    grid-area: about-me-content;
+}
+
+.work-header {
+    grid-area: work-header;
+}
+
+.work-content {
+    grid-area: work-content;
+    padding: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.work-content div {
+    height: 30%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--secondary-color);
+}
+
+.large-card {
+    width: 98%;
+}
+
+.small-card {
+    width: 48%;
+}
+
+.contact-me-header {
+    grid-area: contact-me-header;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.contact-me-content {
+    grid-area: contact-me-content;
     margin: auto 0;
+}
+
+.contact-me-content ul {
     display: flex;
     justify-content: space-around;
 }
 
-main ul li {
+
+.contact-me-content ul li {
     padding: 20px;
     font-size: 120%;
 }
