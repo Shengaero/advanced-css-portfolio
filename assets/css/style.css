@@ -6,6 +6,10 @@
     --accent-color: #B8EF98;
 }
 
+body {
+    min-width: 650px;
+}
+
 /* smooth scroll behavior for clicking links and page refresh */
 
 * {
@@ -113,6 +117,10 @@ main {
     'work-header        work-content      '
     'work-header        work-content      '
     'work-header        work-content      '
+    'work-header        work-content      '
+    'work-header        work-content      '
+    'work-header        work-content      '
+    'work-header        work-content      '
     'contact-me-header  contact-me-content'
     ;
 }
@@ -126,6 +134,8 @@ main {
 }
 .contact-me-header {
     grid-area: contact-me-header;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .about-me-content {
     grid-area: about-me-content;
@@ -138,10 +148,14 @@ main {
 }
 
 main > * {
-    padding: 10px;
+    padding: 5px 10px;
+    margin: 20px 0;
 }
 
 main h1 {
+    border-right: var(--primary-text-color);
+    border-right-width: 5px;
+    border-right-style: solid;
     margin-left: 50px;
     text-align: right;
     font-size: 240%;
@@ -152,10 +166,59 @@ main p {
     margin-right: 50px;
 }
 
+main ul {
+    margin: auto 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+main ul li {
+    padding: 20px;
+    font-size: 120%;
+}
+
 /* change min-height for small and medium screen sizes */
 @media screen and (max-width: 700px) {
     main {
         min-height: 1200px;
+        display: flex;
+    }
+
+    main h1 {
+        display: flex;
+        justify-content: center;
+        border-right: var(--primary-text-color);
+        border-right-width: none;
+        border-right-style: none;
+        text-align: center;
+        font-size: 240%;
+        width: auto;
+
+        /* left right margins to 20 for consistency */
+        margin-left: 20px;
+        margin-right: 20px; 
+        margin-top: 20px; /* remove auto margin*/
+        margin-bottom: 0px; /* remove margin on bottom to make header closer to actual tabs */
+    }
+
+    main p {
+        font-size: 150%;
+    }
+
+    .work-content {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+
+    /* set this one manually for some reason or else it doesn't actually stop automatically scaling */
+    .contact-me-header {
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    main ul {
+        margin: 20px;
     }
 }
 
