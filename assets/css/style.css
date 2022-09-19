@@ -218,8 +218,13 @@ main section {
     background-color: var(--secondary-color);
 }
 
+.work-content div h2 a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
 .large-card {
-    background-image: url("../images/cat1.jpg");
+    background-image: url("../images/weather-or-not-image.png");
     height: 53%;
     width: 98%;
 }
